@@ -43,7 +43,7 @@ public class FormacionServiceImpl implements FormacionService{
 		cf.setNombre(formacion.getCurso());
 		double duracion = formacion.getAsignaturas()*10;
 		cf.setDuracion(duracion);
-		cf.setCodCurso(formacion.getCurso().substring(0,3));
+		cf.setCodCurso(formacion.getCurso().substring(0,3)+duracion);
 		cf.setPrecio(formacion.getPrecio());
 		
 		template.postForLocation(url+"curso", cf);	
