@@ -16,7 +16,7 @@ public interface CursoService{
 	List<Curso> eliminarCurso(String codCurso);
 	
 	//Actualización duración
-	void actualizarDuracionCurso(Double duracion);
+	void actualizarDuracionCurso(String codCurso, Double duracion);
 	
 	//Buscar curso
 	Curso buscarCurso(String codCurso);

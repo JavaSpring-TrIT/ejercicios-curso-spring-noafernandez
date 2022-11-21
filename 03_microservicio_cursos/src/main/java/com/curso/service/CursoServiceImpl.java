@@ -36,8 +36,8 @@ public class CursoServiceImpl implements CursoService{
 	
 	//Actualización duración
 	@Override
-	public void actualizarDuracionCurso(Double duracion) {
-		Curso c = new Curso ();
+	public void actualizarDuracionCurso(String codCurso, Double duracion) {
+		Curso c = this.buscarCurso(codCurso);
 		c.setDuracion(duracion);
 		cursoDao.save(c);
 		

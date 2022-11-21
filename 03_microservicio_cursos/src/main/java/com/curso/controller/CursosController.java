@@ -42,9 +42,9 @@ public class CursosController {
 	}
 	
 	
-	@PutMapping(value="curso/{duracion}",consumes=MediaType.APPLICATION_JSON_VALUE)
-	public void actualizar (@PathVariable("duracion") Double duracion) {
-		cursoService.actualizarDuracionCurso(duracion);
+	@PutMapping(value="curso/codCurso/{duracion}",consumes=MediaType.APPLICATION_JSON_VALUE)
+	public void actualizar (@PathVariable("codCurso") String codCurso, @PathVariable("duracion") Double duracion) {
+		cursoService.actualizarDuracionCurso(codCurso, duracion);
 	} 
 	
 	@GetMapping(value="curso/{codCurso}",produces=MediaType.APPLICATION_JSON_VALUE)
